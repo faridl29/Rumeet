@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Rumeet</string>
+    <string name="ruangan">Ruang Bandung</string>
+    <string name="keterangan_lain">Keterangan lainnya dalam setipa ruangan</string>
+    <string name="hide">HIDE</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

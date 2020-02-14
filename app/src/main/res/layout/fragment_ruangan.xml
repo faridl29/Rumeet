@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/actionBarSize"
+    android:background="@color/white"
+    app:layoutDescription="@xml/scrollable_header_above_recycler_view_scene"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingEnd="@dimen/spacing_medium"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <com.miguelcatalan.materialsearchview.MaterialSearchView
+        android:id="@+id/search_view"
+        android:elevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionBarSize"/>
+
+    <RelativeLayout
+        android:id="@+id/card"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/greeting_img"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_default_half_night"/>
+
+        <TextView
+            android:id="@+id/greeting_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:textColor="#006468"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_marginTop="120dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listBookingToday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardview"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_margin="11dp"
+                android:background="#fff"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/spacing_large"
+                        android:background="@color/design_default_color_primary"
+                        android:elevation="@dimen/spacing_large"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/nomor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="0"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_above="@+id/jam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TODAY"
+                            android:textColor="@color/white"
+                            android:textSize="10dp"/>
+
+                        <TextView
+                            android:id="@+id/jam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="=/=/=/="
+                            android:layout_alignParentBottom="true"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:textSize="12dp"/>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:padding="@dimen/spacing_large">
+
+                        <TextView
+                            android:id="@+id/ruangan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:text="Tidak ada jadwal booking untuk hari ini"/>
+
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <com.arindicatorview.ARIndicatorView
+                android:id="@+id/pageIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:indicator_size="15"
+                app:number_of_indicators="5"
+                app:indicator_color="@color/grey_20"
+                app:selected_color="@color/white"
+                app:indicator_animation="@anim/zoom_in"
+                app:indicator_scrubbing="true"
+                app:animate_indicator_scrubbing="true"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingBottom="@dimen/actionBarSize"
+        android:clipToPadding="false"
+        android:scrollIndicators="none"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card">
+    </android.support.v7.widget.RecyclerView>
+
+
+</android.support.constraint.motion.MotionLayout>

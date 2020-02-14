@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "55790356493",
+    "firebase_url": "https://rumeet-5085f.firebaseio.com",
+    "project_id": "rumeet-5085f",
+    "storage_bucket": "rumeet-5085f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55790356493:android:bcdb92f2028db0ed266d44",
+        "android_client_info": {
+          "package_name": "com.mfa.rumeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55790356493-tu2tmimhes2m5de5vn3e3e1e7f9oh956.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mfa.rumeet",
+            "certificate_hash": "ea16401bea96367688b3ebd1e2886d6827a6eed4"
+          }
+        },
+        {
+          "client_id": "55790356493-qao2k54j54co6olhpd66q2g4u40a9lt1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO-QzvsuHmdCpbhZSCHg_9fKPwGFPP9Tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55790356493-qao2k54j54co6olhpd66q2g4u40a9lt1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
